@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>반응속도 테스트</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body id="reaction-page">
+  <header>
+    <h1>반응속도 테스트</h1>
+    <nav>
+      <a href="index.html">홈</a>
+      <a href="click.html">클릭속도 테스트</a>
+    </nav>
+  </header>
+  <main>
+    <section class="card">
+      <p>빨간원이 초록색이 됐을 때 최대한 빨리 클릭하세요.</p>
+      <div class="radio-row">
+        <label class="radio-item"><input type="radio" name="trials" value="1"><span>1회</span></label>
+        <label class="radio-item"><input type="radio" name="trials" value="3" checked><span>3회</span></label>
+        <label class="radio-item"><input type="radio" name="trials" value="5"><span>5회</span></label>
+        <label class="radio-item"><input type="radio" name="trials" value="10"><span>10회</span></label>
+      </div>
+      <div style="margin-top:10px">
+        <button id="reaction-start">시작</button>
+        <button id="reaction-back">취소</button>
+      </div>
+
+      <div id="reaction-area">
+        <div id="circle" class="circle red">준비</div>
+        <div id="reaction-info" class="info"></div>
+      </div>
+
+      <div id="reaction-results" class="results hidden">
+        <canvas id="reaction-chart" width="600" height="300"></canvas>
+        <div class="stats">
+          <div>최고: <span id="max">-</span> ms</div>
+          <div>최저: <span id="min">-</span> ms</div>
+          <div>평균: <span id="avg">-</span> ms</div>
+        </div>
+        <div style="margin-top:10px">
+          <button id="reaction-share">공유</button>
+          <button id="reaction-reset">다시하기</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden"><div class="modal-content"><h3 id="modal-title"></h3><div id="modal-body"></div><div class="modal-actions"><button id="modal-share">공유</button><button id="modal-close">닫기</button></div></div></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

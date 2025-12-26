@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>클릭속도 테스트</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="click-page">
+  <header>
+    <h1>클릭속도 테스트</h1>
+    <nav>
+      <a href="index.html">홈</a>
+      <a href="reaction.html">반응속도 테스트</a>
+    </nav>
+  </header>
+  <main>
+    <section class="card">
+      <p>지정한 시간 동안 큰 영역을 가능한 많이 클릭하세요.</p>
+      <div class="radio-row">
+        <label class="radio-item"><input type="radio" name="duration" value="3"><span>3초</span></label>
+        <label class="radio-item"><input type="radio" name="duration" value="5" checked><span>5초</span></label>
+        <label class="radio-item"><input type="radio" name="duration" value="10"><span>10초</span></label>
+      </div>
+      <div style="margin-top:10px">
+        <button id="click-start">시작</button>
+        <button id="click-back">취소</button>
+      </div>
+
+      <div id="click-area-wrap">
+        <div id="click-area">클릭하세요!</div>
+        <div class="info">남은시간: <span id="time-left">-</span>s • 클릭수: <span id="click-count">0</span></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden"><div class="modal-content"><h3 id="modal-title"></h3><div id="modal-body"></div><div class="modal-actions"><button id="modal-share">공유</button><button id="modal-close">닫기</button></div></div></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

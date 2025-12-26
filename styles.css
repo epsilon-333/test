@@ -1,0 +1,54 @@
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --accent:#2b7cff;
+  --danger:#d9534f;
+  --success:#28a745;
+}
+*{box-sizing:border-box;font-family:Segoe UI, Roboto, "Noto Sans KR", sans-serif}
+body{margin:0;background:var(--bg);color:#111}
+header{padding:18px 24px;background:linear-gradient(90deg,#fff,#f1f7ff);display:flex;align-items:center;justify-content:space-between}
+header h1{margin:0;font-size:18px}
+nav a{margin-left:12px;color:#fff;text-decoration:none;background:var(--accent);padding:8px 10px;border-radius:8px;font-weight:600;box-shadow:0 6px 18px rgba(43,124,255,0.12)}
+main{max-width:980px;margin:24px auto;padding:0 16px}
+.card{background:var(--card);Padding:18px;border-radius:10px;box-shadow:0 4px 18px rgba(20,30,60,.06);margin-bottom:20px}
+.circle{width:240px;height:240px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:#fff;user-select:none;cursor:pointer;position:relative;overflow:hidden}
+.red{background:var(--danger)}
+.green{background:var(--success)}
+#reaction-area{display:flex;gap:24px;align-items:center;margin-top:18px}
+.info{font-size:14px;color:#333}
+.results{margin-top:18px}
+.hidden{display:none}
+#click-area-wrap{margin-top:18px}
+#click-area{width:100%;max-width:560px;height:220px;background:#0b66ff22;border:3px dashed #0b66ff55;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;color:#0b66ff;cursor:pointer;user-select:none}
+.click-dot{position:absolute;width:14px;height:14px;border-radius:50%;background:#c62828;transform:translate(-50%,-50%);pointer-events:none;border:2px solid #fff}
+
+#click-area{position:relative}
+.stats{display:flex;gap:18px;margin-top:12px}
+button{margin-left:8px;padding:8px 12px;border-radius:6px;border:1px solid #ddd;background:#fff;cursor:pointer}
+label{display:inline-flex;align-items:center;gap:8px;margin-right:8px}
+footer{padding:12px;text-align:center;color:#666}
+
+@media(max-width:720px){
+  .circle{width:180px;height:180px}
+  #click-area{height:160px}
+}
+
+/* radio as small circle selector */
+.radio-row{display:flex;gap:12px;margin-top:8px}
+.radio-item{display:inline-flex;align-items:center;gap:8px}
+.radio-item input{appearance:none;width:18px;height:18px;border-radius:50%;border:2px solid #888;display:inline-block;position:relative}
+.radio-item input:checked{background:var(--accent);border-color:var(--accent)}
+.radio-item span{display:inline-block;padding:4px 6px}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;z-index:9999}
+.modal.hidden{display:none}
+.modal-content{background:#fff;padding:18px;border-radius:10px;max-width:560px;width:90%}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* click marker inside circle */
+.click-dot{position:absolute;width:14px;height:14px;border-radius:50%;background:#c62828;transform:translate(-50%,-50%);pointer-events:none;border:2px solid #fff}
+
+.big-btn{display:inline-block;padding:12px 18px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none}
+
